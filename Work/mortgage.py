@@ -16,8 +16,12 @@ while principal > 0:
         principal = principal - extra_payment
         total_paid = total_paid + extra_payment
     total_paid = total_paid + payment
+    if principal<0:
+        total_paid=total_paid+principal
+        principal=0
     print (month, round(total_paid,2), round(principal,2))
     
+total_paid=total_paid +principal
 
 print('Total paid', round(total_paid,2))
 print('Months', month)
